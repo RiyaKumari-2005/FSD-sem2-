@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My first javaScript Program</h2>
+    <button onclick="runcode()">Run code</button>
+    
+    <p id="result"></p>
+    
+    <script>
+        function runcode() {
+            let a = 10;
+            let b = 20;
+            let sum = a + b;
+            document.getElementById("result").innerHTML = "The sum of " + a + " and " + b + " is: " + sum;
+        }
+        </script>
+        <h2>Data types in javaScript</h2>
+        <button onclick="runcode2()">Run code</button>
+        <p id="result2"></p>
+        <script>
+        function runcode2() {
+            let age = 15;
+            let name= "ansh";
+            let isStudent = true;
+            document.getElementById("result2").innerHTML = "age type is: " + typeof age + "<br>" +name + " type is: " + typeof name + "<br>" + isStudent + " type is: " + typeof isStudent;
+        }
+    </script>
+    <h2>Maths operation</h2>
+    <button onclick="maths()">Run code</button>
+    <p id="result3"></p>
+    <script>
+        function maths() {
+            let a = 10;
+            let b = 20;
+            let sum = a + b;
+            let sub = a - b;
+            let mul = a * b;
+            let div = a / b;
+            document.getElementById("result3").innerHTML = "The sum of " + a + " and " + b + " is: " + sum + "<br>" +
+                "The subtraction of " + a + " and " + b + " is: " + sub + "<br>" +
+                "The multiplication of " + a + " and " + b + " is: " + mul + "<br>" +
+                "The division of " + a + " and " + b + " is: " + div;
+        }
+        </script>
+        <h2>if-Else example</h2>
+        <button onclick="runcode4()">Run code</button>
+        <p id="result4"></p>
+        <script>
+            function runcode4() {
+                let marks=95;
+                if(marks>=90){
+                    document.getElementById("result4").innerHTML = "Grade: A";
+                } else if (marks>=75){
+                    document.getElementById("result4").innerHTML = "Grade: B";
+                }
+                else{
+                    document.getElementById("result4").innerHTML = "Grade: C -need to improve";
+                }
+            }
+        </script>
+        <h2> Function Example</h2>
+        <button onclick="runcode5()">Run code</button>
+        <p id="result5"></p>
+        <script>
+            function runcode5() {
+                 function add(x, y){
+                 return x + y;
+                 }
+                 let result = add(10, 20);
+                document.getElementById("result5").innerHTML = "The sum of 10 and 20 is: " + result;
+            }
+
+            
+            
+        </script>
+        <h2>Array Example</h2>
+        <button onclick="runcode6()">Run code</button>
+        <p id="result6"></p>
+        <script>
+            function runcode6() {
+                let students = ["ansh", "rahul", "rohit", "sachin"];
+                let firstStudent = students[0];
+                let total=students.length;
+                students.push("vishal");
+                document.getElementById("result6").innerHTML = "first:"+ firstStudent+"|total:"+total+"|all students:"+students;
+            }
+        </script>
+        <h2>Object concept</h2>
+        <button onclick="runcode7()">Run code</button>
+        <p id="result7"></p>
+        <script>
+            function runcode7() {
+                let student = {
+                    name: "ansh",
+                    age: 15,
+                    marks:85
+                };
+                //access values using dot
+                 let studentName = student.name;
+                 //access values using bracket
+                 let studentAge = student["age"];
+                 //update values
+                 student.marks=90;
+                 document.getElementById("result7").innerHTML = "Name: " + studentName + "<br>" + "Age: " + studentAge + "<br>" + "Marks: " + student.marks;
+             }
+         </script>
+         <h2>Dom Manipulation</h2>
+         <button onclick="runcode8()">Run code</button>
+            <p id="demoText">This text will change whenyou click</p>
+            <script>
+                function runcode8() {
+                    document.getElementById("demoText").innerHTML = "Hello World! javaScript is working";
+                    document.getElementById("demoText").style.color = "blue";
+                }
+            </script>
+            <h2>Event Examples</h2>
+            <button onclick="setupEvent()">setup Event(run once)</button>
+            <button id="clickME">Click Me!</button>
+            <script>
+                function setupEvent() {
+                    document.getElementById("clickME").addEventListener("click", function() {
+                        alert("Button clicked!");
+                    });
+                }
+            </script>
+            <h2>Template Literals</h2>
+            <button onclick="runcode9()">Run code</button>
+            <p id="result9"></p>
+            <script>
+                function runcode9() {
+                    let name = "ansh";
+                    let marks = 15;
+                    let message = `Hello, my name is ${name} and I am ${marks} years old.`;
+                    document.getElementById("result9").innerHTML = message;
+                }
+            </script>
+            <h2>classes Example</h2>
+            <button onclick="runcode10()">Run code</button>
+            <p id="result10"></p>
+            <script>
+                class Student {
+                    constructor(name, age, marks) {
+                        this.name = name;
+                        this.age = age;
+                        this.marks = marks;
+                    }
+
+                    introduce() {
+                        return `Hello, my name is ${this.name}, I am ${this.age} years old, and I have ${this.marks} marks.`;
+                    }
+                }
+
+                function runcode10() {
+                    let student = new Student("ansh", 15, 85);
+                    document.getElementById("result10").innerHTML = student.introduce();
+                }
+            </script>
+            <button id="btn">Click Me!</button>
+            <p id="output">hello</p>
+            <script>
+                document.getElementById("btn").addEventListener("click", () => {
+                    document.getElementById("output").innerHTML = "Button was clicked!";
+                });
+                </script>
+
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                    <p id="greet"></p>
+
+                <script>
+                    const input=document.getElementById("nameInput");
+                    const greet=document.getElementById("greet");
+                    input.addEventListener("input",()=>{
+                        greet.textContent=`Hello, ${input.value}!`;
+                    });
+                </script>
+
+                <ul id="Tasklist">
+                <li>sample task1</li>
+                <li>sample task2</li>
+                </ul>
+                <script>
+                    document.getElementById("Tasklist").addEventListener("click", (e) => {
+                        if(e.target.tagName === "LI"){
+                            e.target,remove();
+                        }
+                    });
+                        
+                </script>
+
+                <input type="text" id="taskInput" placeholder="Enter a task">
+                <button id="addBtn">Add</button>
+                <ul id="taskList"></ul>node server.js
+            <script>
+                docunent.getElementById("addBtn").addEventListener("click",()=>{
+                    const input=document.getElementById("taskInput");
+                    if(input.value.trim()==="")return;
+
+                    const li=document,createElement("li");
+                    li.textcontent=input.value;
+                    document.getElementById("taskList").appendChild(li);
+                    input.value="";
+                });
+            </script>
+    </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC Limited Company</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>ABC Limited Company</h1>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#payment">Payment</a>
+            <a href="#login">Login</a>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <h2>Welcome to ABC Limited Company</h2>
+
+        <p>
+            Buy books for Physics, Chemistry, Biology, Maths and English
+            at affordable prices.
+        </p>
+
+        <button onclick="scrollToSubjects()">
+            Explore Books
+        </button>
+
+    </section>
+
+
+    <!-- Subject Section -->
+    <section id="subjects">
+
+        <h2 class="section-title">Available Subjects</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Subject</th>
+                    <th>Price</th>
+                    <th>Book</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Physics</td>
+                    <td>₹350</td>
+                    <td>Physics Book</td>
+                    <td>
+                        <button onclick="addToCart('Physics', 350)">
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Chemistry</td>
+                    <td>₹450</td>
+                    <td>Chemistry Book</td>
+                    <td>
+                        <button onclick="addToCart('Chemistry', 450)">
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Biology</td>
+                    <td>₹200</td>
+                    <td>Biology Book</td>
+                    <td>
+                        <button onclick="addToCart('Biology', 200)">
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Maths</td>
+                    <td>₹300</td>
+                    <td>Maths Book</td>
+                    <td>
+                        <button onclick="addToCart('Maths', 300)">
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>English</td>
+                    <td>₹400</td>
+                    <td>English Book</td>
+                    <td>
+                        <button onclick="addToCart('English', 400)">
+                            Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- Cart Section -->
+    <section class="cart">
+
+        <h2>Your Cart 🛒</h2>
+
+        <ul id="cartItems">
+            <li>Your cart is empty.</li>
+        </ul>
+
+        <h3>
+            Total Price: ₹<span id="totalPrice">0</span>
+        </h3>
+
+        <button onclick="clearCart()" class="clear-btn">
+            Clear Cart
+        </button>
+
+    </section>
+
+
+    <!-- Payment Section -->
+    <section id="payment" class="form-section">
+
+        <h2>Payment 💳</h2>
+
+        <form onsubmit="makePayment(event)">
+
+            <label>Name</label>
+            <input
+                type="text"
+                id="paymentName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Payment Method</label>
+
+            <select id="paymentMethod" required>
+                <option value="">Select Payment Method</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Credit/Debit Card</option>
+                <option value="Cash">Cash on Delivery</option>
+            </select>
+
+            <button type="submit">
+                Pay Now
+            </button>
+
+        </form>
+
+        <p id="paymentMessage"></p>
+
+    </section>
+
+
+    <!-- Login Section -->
+    <section id="login" class="form-section">
+
+        <h2>Login 🔐</h2>
+
+        <form onsubmit="loginUser(event)">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p id="loginMessage"></p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>ABC Limited Company</h3>
+
+        <p>
+            📚 Quality Books | 💳 Easy Payment | 🚚 Fast Delivery
+        </p>
+
+        <a
+            href="https://maps.google.com"
+            target="_blank"
+        >
+            📍 Location - Google Map
+        </a>
+
+        <p>
+            © 2026 ABC Limited Company. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

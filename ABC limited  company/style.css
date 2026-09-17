@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: #1e3a5f;
+    color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ffffff
+    );
+}
+
+.hero h2 {
+    font-size: 40px;
+    color: #1e3a5f;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.hero button,
+.form-section button,
+.hero button {
+    background-color: #1e3a5f;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.hero button:hover,
+.form-section button:hover {
+    background-color: #142840;
+}
+
+
+/* Sections */
+
+section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    color: #1e3a5f;
+
+    margin-bottom: 30px;
+}
+
+
+/* Table */
+
+table {
+    width: 100%;
+
+    background-color: white;
+
+    border-collapse: collapse;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #1e3a5f;
+
+    color: white;
+
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #eef5ff;
+}
+
+
+/* Add to Cart Button */
+
+td button {
+    background-color: #198754;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #146c43;
+}
+
+
+/* Cart */
+
+.cart {
+    background-color: white;
+
+    margin: 30px 8%;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    color: #1e3a5f;
+
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    margin-bottom: 20px;
+
+    padding-left: 20px;
+}
+
+#cartItems li {
+    padding: 8px;
+}
+
+.clear-btn {
+    background-color: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #b02a37;
+}
+
+
+/* Forms */
+
+.form-section {
+    max-width: 600px;
+
+    margin: 50px auto;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+
+    color: #1e3a5f;
+
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: #1e3a5f;
+}
+
+#loginMessage,
+#paymentMessage {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1e3a5f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 10px;
+}
+
+footer a {
+    color: #ffd166;
+
+    text-decoration: none;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+}
